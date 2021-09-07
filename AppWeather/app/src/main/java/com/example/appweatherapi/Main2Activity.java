@@ -1,13 +1,14 @@
-package com.example.hackerd.appweather;
+package com.example.appweatherapi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -79,8 +80,8 @@ public class Main2Activity extends AppCompatActivity {
 
                             JSONArray jsonArrayList = jsonObject.getJSONArray("list");
                             for (int i = 0; i < jsonArrayList.length(); i++){
-                               JSONObject jsonObjectList = jsonArrayList.getJSONObject(i);
-                               String ngay = jsonObjectList.getString("dt");
+                                JSONObject jsonObjectList = jsonArrayList.getJSONObject(i);
+                                String ngay = jsonObjectList.getString("dt");
 
                                 long l = Long.valueOf(ngay);
                                 Date date = new Date(l*1000L);
@@ -118,4 +119,5 @@ public class Main2Activity extends AppCompatActivity {
                 });
         requestQueue.add(stringRequest);
     }
+
 }

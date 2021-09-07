@@ -1,4 +1,4 @@
-package com.example.hackerd.appweather;
+package com.example.appweatherapi;
 
 import org.junit.Test;
 

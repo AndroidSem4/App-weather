@@ -1,4 +1,4 @@
-package com.example.hackerd.appweather;
+package com.example.appweatherapi;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends BaseAdapter{
+public class CustomAdapter extends BaseAdapter {
     Context context;
     ArrayList<Thoitiet> arrayList;
 
@@ -57,4 +57,5 @@ public class CustomAdapter extends BaseAdapter{
         Picasso.with(context).load("http://openweathermap.org/img/w/"+thoitiet.Image+".png").into(imgvtrangthai);
         return convertView;
     }
+
 }

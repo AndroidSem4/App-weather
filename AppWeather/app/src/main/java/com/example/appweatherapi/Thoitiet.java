@@ -1,4 +1,4 @@
-package com.example.hackerd.appweather;
+package com.example.appweatherapi;
 
 public class Thoitiet {
     public String Day;
@@ -6,6 +6,14 @@ public class Thoitiet {
     public String Image;
     public String MaxTemp;
     public String MinTemp;
+
+    public Thoitiet(String day, String status, String image, String maxTemp, String minTemp) {
+        Day = day;
+        Status = status;
+        Image = image;
+        MaxTemp = maxTemp;
+        MinTemp = minTemp;
+    }
 
     public String getDay() {
         return Day;
@@ -15,43 +23,35 @@ public class Thoitiet {
         Day = day;
     }
 
-    public void setStatus(String status) {
-        Status = status;
-    }
-
-    public void setImage(String image) {
-        Image = image;
-    }
-
-    public void setMaxTemp(String maxTemp) {
-        MaxTemp = maxTemp;
-    }
-
-    public void setMinTemp(String minTemp) {
-        MinTemp = minTemp;
-    }
-
     public String getStatus() {
         return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 
     public String getImage() {
         return Image;
     }
 
+    public void setImage(String image) {
+        Image = image;
+    }
+
     public String getMaxTemp() {
         return MaxTemp;
+    }
+
+    public void setMaxTemp(String maxTemp) {
+        MaxTemp = maxTemp;
     }
 
     public String getMinTemp() {
         return MinTemp;
     }
 
-    public Thoitiet(String day, String status, String image, String maxTemp, String minTemp) {
-        Day = day;
-        Status = status;
-        Image = image;
-        MaxTemp = maxTemp;
+    public void setMinTemp(String minTemp) {
         MinTemp = minTemp;
     }
 

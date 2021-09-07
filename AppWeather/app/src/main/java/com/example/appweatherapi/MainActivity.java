@@ -1,9 +1,9 @@
-package com.example.hackerd.appweather;
+package com.example.appweatherapi;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,10 +63,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     public void GetCurrentWeatherData(String data){
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
-        String url = "http://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&appid=be8d3e323de722ff78208a7dbb2dcd6f";
+        String url = "http://api.openweathermap.org/data/2.5/weather?q="+data+"&units=metric&appid=d0f86904963ee8042fcb55feba42fbe6";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -126,17 +125,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        edtname= (EditText) findViewById(R.id.edtname);
-        btnnext= (Button) findViewById(R.id.btnnext);
-        btntimkiem= (ImageButton) findViewById(R.id.btntimkiem);
-        txttp= (TextView) findViewById(R.id.txttp);
-        txtqg= (TextView) findViewById(R.id.txtqg);
-        txtnhietdo= (TextView) findViewById(R.id.txtnhietdo);
-        txttrangthai= (TextView) findViewById(R.id.txttrangthai);
-        txtdrop= (TextView) findViewById(R.id.txtdrop);
-        txtcloud= (TextView) findViewById(R.id.txtcloud);
-        txtwind= (TextView) findViewById(R.id.txtwind);
-        txtday= (TextView) findViewById(R.id.txtday);
-        imgmay= (ImageView) findViewById(R.id.imgmay);
+        edtname=findViewById(R.id.edtname);
+        btnnext=findViewById(R.id.btnnext);
+        btntimkiem=findViewById(R.id.btntimkiem);
+        txttp=findViewById(R.id.txttp);
+        txtqg=findViewById(R.id.txtqg);
+        txtnhietdo=findViewById(R.id.txtnhietdo);
+        txttrangthai=findViewById(R.id.txttrangthai);
+        txtdrop=findViewById(R.id.txtdrop);
+        txtcloud=findViewById(R.id.txtcloud);
+        txtwind=findViewById(R.id.txtwind);
+        txtday=findViewById(R.id.txtday);
+        imgmay=findViewById(R.id.imgmay);
     }
+
 }
