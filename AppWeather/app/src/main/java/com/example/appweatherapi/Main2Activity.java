@@ -66,7 +66,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private void Get7DaysData(String data) {
-        String url = "http://api.openweathermap.org/data/2.5/forecast/daily?q="+data+"&units=metric&cnt=7&appid=be8d3e323de722ff78208a7dbb2dcd6f";
+        String url = "http://api.openweathermap.org/data/2.5/forecast/daily?q="+data+"&units=metric&cnt=7&appid=d0f86904963ee8042fcb55feba42fbe6";
         RequestQueue requestQueue = Volley.newRequestQueue(Main2Activity.this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
